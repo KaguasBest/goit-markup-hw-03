@@ -47,6 +47,20 @@ ul {
   padding: 0;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 .section {
   padding: 120px 0;
 }
@@ -105,13 +119,13 @@ button {
   background-color: var(--white-background);
   position: fixed;
   width: 100%;
-  padding: 24px 0;
   border-bottom: 1px solid #e7e9fc;
 }
 
 .header-nav {
   display: flex;
   flex-direction: row;
+  padding: 24px 0;
   margin: auto 0;
 }
 
@@ -124,6 +138,7 @@ nav > a {
   letter-spacing: 0.03em;
   line-height: 1.17;
   color: var(--primary-brand);
+  margin-right: 76px;
 }
 
 .header-logo {
@@ -136,7 +151,10 @@ nav > a {
   line-height: 1.5;
   color: var(--dark);
   letter-spacing: 0.02em;
-  padding-left: 40px;
+}
+
+.header .list {
+  gap: 40px;
 }
 
 .navigation-link:hover {
@@ -160,7 +178,6 @@ nav > a {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--text);
-  padding-left: 40px;
 }
 
 .contacts-link:hover {
@@ -180,11 +197,8 @@ nav > a {
 /* Introduce block style */
 .introduce {
   background-color: var(--dark);
+  padding: 188px 0;
   color: var(--white-background);
-}
-
-.section.introduce {
-  padding: 253px 0 180px 0;
 }
 
 .introduce .container {
@@ -199,6 +213,7 @@ nav > a {
   letter-spacing: 0.02em;
   text-align: center;
   margin-bottom: 48px;
+  max-width: 496px;
 }
 
 .button-introduce {
@@ -214,6 +229,7 @@ nav > a {
   font-family: Roboto, sans-serif;
   width: fit-content;
   padding: 16px 32px;
+  min-width: 169px;
 }
 
 .button-introduce:hover {
@@ -231,12 +247,21 @@ nav > a {
 
 /* Features block style */
 
+.features {
+  padding: 120px 0;
+}
+
 .features-list {
   gap: 24px;
 }
 
 .features-item {
   flex-direction: column;
+  width: calc((100% - 72px) / 4);
+}
+
+.features-item > .alternative-title {
+  margin-bottom: 8px;
 }
 /* End Features block style */
 
@@ -288,15 +313,21 @@ nav > a {
 .team-item {
   background-color: var(--white-background);
   align-items: center;
+  border-radius: 0px 0px 4px 4px;
+}
+
+.team-staf {
+  padding: 32px 16px;
 }
 
 .team-title {
-  padding-top: 32px;
+  text-align: center;
+  margin-bottom: 8px;
 }
 
 .team-describe {
-  padding: 8px 0 32px;
   font-size: 16px;
+  text-align: center;
 }
 /* End Team block style */
 
@@ -308,20 +339,18 @@ nav > a {
 .portfolio .container {
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  padding-top: 72px;
+  padding-top: 92px;
   padding-bottom: 120px;
 }
 
 .portfolio-list {
   gap: 24px;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
-.portfolio-item {
-  justify-content: center;
-  border-bottom: 1px solid #e7e9fc;
-  margin-bottom: 24px;
+.portfolio-btn {
+  margin-bottom: 72px;
 }
 
 .button-filter {
@@ -337,12 +366,16 @@ nav > a {
   padding: 12px 24px;
   color: var(--primary-brand);
   background-color: var(--light);
-  margin-bottom: 72px;
 }
 
 .button-filter:hover {
   background-color: var(--pressed-state);
   color: var(--white-background);
+  border: 1px solid transparent;
+}
+
+.button-filter:focus {
+  border: 1px solid transparent;
 }
 
 .button-filter:focus,
@@ -351,17 +384,23 @@ nav > a {
   color: var(--white-background);
 }
 
+.portfolio-product {
+  row-gap: 48px;
+}
+
+.product-describe {
+  padding: 32px 16px;
+  border: 1px solid var(--accent);
+  border-top: none;
+}
+
 .portfolio-item-title {
   font-weight: 500;
   font-size: 20px;
   color: var(--dark);
   letter-spacing: 0.02em;
   line-height: 1.2;
-  padding: 32px 0 8px 16px;
-}
-
-.portfolio-item-text {
-  padding: 0 0 32px 16px;
+  margin-bottom: 8px;
 }
 
 .portfolio-link {
@@ -375,8 +414,9 @@ nav > a {
 /* Footer style */
 .footer {
   color: var(--light);
-  background-color: #2e2f42;
+  background-color: var(--dark);
   padding: 100px 0;
+  width: 100%;
 }
 
 .footer .container {
@@ -387,12 +427,12 @@ footer a {
   font-family: 'Raleway', sans-serif;
   font-weight: 800;
   font-size: 18px;
-  line-height: 21px;
   text-transform: uppercase;
   letter-spacing: 0.03em;
   line-height: 1.17;
   color: var(--primary-brand);
   margin-bottom: 16px;
+  display: inline-block;
 }
 
 .footer .footer-logo {
