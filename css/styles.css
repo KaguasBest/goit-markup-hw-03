@@ -126,7 +126,8 @@ button {
   display: flex;
   flex-direction: row;
   margin: auto 0;
-  text-align: center;
+  padding: 24px 0;
+  align-items: center;
 }
 
 nav > a {
@@ -155,7 +156,6 @@ nav > a {
 
 .header .list {
   gap: 40px;
-  padding: 24px 0;
 }
 
 .navigation-link:hover {
@@ -340,9 +340,8 @@ nav > a {
 /* --------------------------------------------------------------------- */
 
 /* Pportfolio section */
-.section.portfolio {
-  padding-top: 92px;
-  padding-bottom: 120px;
+.portfolio {
+  padding: 96px 0 120px 0;
 }
 
 .portfolio .container {
@@ -441,7 +440,7 @@ footer a {
   margin-bottom: 16px;
 }
 
-.footer.logo {
+.footer .logo {
   display: inline-block;
 }
 
