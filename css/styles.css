@@ -427,9 +427,9 @@ nav > a {
   padding: 100px 0;
 }
 
-/* .footer .container {
+.footer .container {
   flex-direction: column;
-} */
+}
 
 .footer .logo {
   font-family: 'Raleway', sans-serif;
@@ -439,12 +439,9 @@ nav > a {
   letter-spacing: 0.03em;
   line-height: 1.17;
   color: var(--primary-brand);
-  margin-bottom: 16px;
   display: inline-block;
+  margin-bottom: 16px;
 }
-
-/* .footer .logo {
-} */
 
 .footer-logo,
 .footer-p {
@@ -453,7 +450,6 @@ nav > a {
 
 .footer-p {
   line-height: 1.5;
-  color: var(--cloud-color);
   letter-spacing: 0.02em;
   max-width: 264px;
 }
