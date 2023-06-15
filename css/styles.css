@@ -122,11 +122,14 @@ button {
   border-bottom: 1px solid #e7e9fc;
 }
 
+.header .link {
+  padding: 24px 0;
+}
+
 .header-nav {
   display: flex;
   flex-direction: row;
   margin: auto 0;
-  padding: 24px 0;
   align-items: center;
 }
 
@@ -422,14 +425,13 @@ nav > a {
   color: var(--light);
   background-color: var(--dark);
   padding: 100px 0;
-  width: 100%;
 }
 
-.footer .container {
+/* .footer .container {
   flex-direction: column;
-}
+} */
 
-footer a {
+.footer .logo {
   font-family: 'Raleway', sans-serif;
   font-weight: 800;
   font-size: 18px;
@@ -438,17 +440,21 @@ footer a {
   line-height: 1.17;
   color: var(--primary-brand);
   margin-bottom: 16px;
-}
-
-.footer .logo {
   display: inline-block;
 }
 
-.footer .footer-logo {
+/* .footer .logo {
+} */
+
+.footer-logo,
+.footer-p {
   color: var(--light);
 }
 
 .footer-p {
-  color: var(--light);
+  line-height: 1.5;
+  color: var(--cloud-color);
+  letter-spacing: 0.02em;
+  max-width: 264px;
 }
 /* End Footer style */
